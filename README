@@ -1,0 +1,16 @@
+SAMPLE REQUEST:
+====================
+
+1. Get Task Details:
+    curl -X GET http://localhost:8080/task/1234
+
+2. Create Task Details:
+
+
+3. Update Task Details:
+    3.1 When using @FormParam annotation
+    curl -X PUT -d 'subject=sampletask2&details=this is my task' http://localhost:8080/task/1234
+    3.2 When using TaskDto as parameter
+    curl --header "Content-Type: application/json" -X PUT -d '{"date":1616497665500,"subject":"sample subject 2","details":"this is a sample details"}' http://localhost:8080/task/1234
+
+4. Delete Task Details:
